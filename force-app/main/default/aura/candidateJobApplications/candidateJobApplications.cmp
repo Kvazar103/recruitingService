@@ -1,0 +1,17 @@
+<aura:component controller="RTAgetCandidateJobApplications" implements="force:hasRecordId,flexipage:availableForRecordHome,force:appHostable" access="global">
+    <aura:attribute name="jobApplications" type="List" />
+    <aura:attribute name="columns" type="List" default="[ 
+        {label: 'Job Application Name', fieldName: 'Name', type: 'text'},
+        {label: 'Status', fieldName: 'Stage__c', type: 'text'}
+    ]"/>
+    
+    <lightning:datatable 
+        data="{!v.jobApplications}" 
+        columns="{!v.columns}" 
+        hideCheckboxColumn="true"
+        keyField="Id"
+    />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+</aura:component>
+

@@ -1,0 +1,19 @@
+<template>
+
+    <template  lwc:if={showForm} >
+        <div class="slds-box slds-theme_default">
+         <lightning-record-edit-form record-id={recordId} object-api-name="Position__c">
+            <lightning-output-field field-name="Name"></lightning-output-field>
+            <lightning-output-field field-name="Positon__c"> </lightning-output-field>
+            <lightning-output-field field-name="Min_Salary__c"></lightning-output-field>
+            <lightning-output-field field-name="Max_Salary__c"></lightning-output-field>
+            <lightning-output-field field-name="Status__c"></lightning-output-field>
+            <lightning-output-field field-name="Open_Date__c"></lightning-output-field>
+            <lightning-output-field field-name="Applications__c"></lightning-output-field>
+        </lightning-record-edit-form>
+       </div>
+    </template>
+
+    <button class="slds-button slds-button_neutral" name="Submit" onclick={handleClick}>{buttonName}</button>
+    
+</template>
